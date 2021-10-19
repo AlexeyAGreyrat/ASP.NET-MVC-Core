@@ -1,0 +1,32 @@
+﻿<Page x:Class="Lesson1.PageFib"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Lesson1"
+      mc:Ignorable="d" 
+      d:DesignHeight="280" d:DesignWidth="400"
+      Title="PageFib">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <TextBlock Text="Fibonacci" HorizontalAlignment="Center"/>
+            <TextBlock Name="TextBoxOutput" Text="" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Margin="0,20,0,0" HorizontalAlignment="Center">
+            <TextBlock Text="NumberFib"/>
+            <TextBox Name="TextBoxNumber" Text="0"/>
+
+            <TextBlock Text="Sleep" Margin="0,10,0,0"/>
+            <TextBox Name="TextBoxSleep"/>
+
+            <Button Name="BtnStart" Content="Start" Margin="0,10,0,0" Click="ButtonStart_OnClick"/>            
+        </StackPanel>
+    </Grid>
+</Page>
